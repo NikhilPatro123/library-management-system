@@ -1,0 +1,41 @@
+create database libmanadisha
+
+use libmanadisha
+
+
+create table admintab(ID MEDIUMINT NOT NULL AUTO_INCREMENT, 
+username varchar(30), password varchar(30), PRIMARY KEY (ID));
+
+
+create table BookEntry(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+BOOKCODE int(10),
+bookname VARCHAR(20),
+AUTHORNAME VARCHAR(20),
+PUBLISHER VARCHAR(20),
+BOOKCOST VARCHAR(20),
+categorytype VARCHAR(20),
+NUMBEROFPAGES VARCHAR(20),
+bookpdf VARCHAR(220),
+DATEOFENTRY date, PRIMARY KEY (ID));
+
+
+create table StudentRegistration(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+sname varchar(20),
+mailid varchar(20),
+Contno varchar(20),
+DateofRegd date,
+Librarycardno varchar(20),
+password varchar(10),
+Security_fee float, PRIMARY KEY (ID));
+
+create table bookcategory(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+categorytype varchar(20),
+PRIMARY KEY (ID));
+
+create table BookMaster(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+bookname varchar(20),
+PRIMARY KEY (ID));
